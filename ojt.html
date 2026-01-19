@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OJT - Olegario</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
+        <a href="index.html"><button>HOME</button></a>
+        <a href="aboutme.html"><button>ABOUT</button></a>
+        <a href="ojt.html"><button>OJT</button></a>
+        <a href="myWork.html"><button>WORKS</button></a>
+        <a href="index.html#contact"><button>CONTACTS</button></a>
+    </div>
+
+    <main>
+        <div class="section" id="ojt">
+            <div class="portfolio-header">
+                <h1>On-The-Job Training</h1>
+                <p>My professional development and training experiences</p>
+            </div>
+
+            <div class="portfolio">
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <img src="assets/automation testing.jpg" alt="OJT Project">
+                        <div class="portfolio-info">
+                            <h2>Automation testing</h2>
+                            <p>Automation testing using Playwright</p>
+                            <button class="button view-more-btn" data-image="assets/automation testing.jpg">View Photo</button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="assets/daily preparation.jpg" alt="OJT Project">
+                        <div class="portfolio-info">
+                            <h2>Daily Preparation</h2>
+                            <p>Daily preparation for tasks and routines onsite.</p>
+                            <button class="button view-more-btn" data-image="assets/daily preparation.jpg">View Photo</button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <img src="assets/wfh.jpg" alt="OJT Project">
+                        <div class="portfolio-info">
+                            <h2>Work From Home</h2>
+                            <p>Experiences and tasks during work from home.</p>
+                            <button class="button view-more-btn" data-image="assets/wfh.jpg">View Photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h2>Skills Acquired</h2>
+                <p>Key technical and non-technical capabilities developed during my OJT.<p>
+                <div class="skills-grid">
+                    <div class="skills-card">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Automated Testing (Selenium, Playwright, and Cypress)</li>
+                            <li>QA Testing, stress testing, and manual Testing</li>
+                            <li>System Architecture & Design Patterns</li>
+                            <li>Custom Odoo 17 module development</li>
+                            <li>Documentation and technical writing</li>
+                            <li>SQL databases (MS SQL and PostgreSQL)</li>
+                        </ul>
+                    </div>
+                    <div class="skills-card">
+                        <h3>Programming Skills</h3>
+                        <ul>
+                            <li>Object-Oriented Programming (OOP) & Design Patterns</li>
+                            <li>Asynchronous Programming & Promises</li>
+                            <li>Understanding the Web Stack & DOM</li>
+                            <li>Logic, Data Structures, and Error Handling</li>
+                            <li>Modern Tooling & Environment Management</li>
+                            <li>DevOps & CI/CD Logic</li>
+                            <li>Shadow DOM & Modern Web Components</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-content-area"></div>
+        </div>
+    </div>
+</body>
+  <footer>
+    <div class="footer">
+        &copy; COPYRIGHT 2025. <img src="assets/logo.png" alt="Icon"> ALL RIGHTS RESERVED
+    </div>
+  </footer>
+</html>

@@ -21,11 +21,13 @@ body {
     height: 100%;
     margin: 0;
     overflow-x: hidden;
+    padding-top: 110px; /* prevents nav from overlapping top content */
 }
 
 /* Fullscreen Section */
 .section {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +147,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px 50px 20px;
+    margin-top: 40px;
     max-width: 1000px;
     gap: 40px;
 }
@@ -207,7 +210,8 @@ body {
     border: 1px solid #f8d69a;   /* Optional: A subtle border for the box */
     border-radius: 8px;       /* Optional: Rounded corners for the box */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: A subtle shadow */
-    padding: 20px;            /* Padding inside the box around the video */
+    padding: 20px;
+    margin-bottom: 40px;            /* Padding inside the box around the video */
     text-align: center;       /* Ensures the iframe itself is centered within its box if it's smaller than the box */
     max-width: fit-content;   /* Makes the box only as wide as its content */
     margin: auto 0px 295px 20px 295px;             /* Alternative to flexbox for centering if .video-container isn't flex */
@@ -215,8 +219,98 @@ body {
 
 .youtube-video iframe {
     display: block; /* Removes any extra space below the iframe */
-    width: 900px; /* Ensure the iframe maintains its specified width */
-    height: 400px; /* Ensure the iframe maintains its specified height */
+    width: 1200px; /* Ensure the iframe maintains its specified width */
+    height: 600px; /* Ensure the iframe maintains its specified height */
+}
+
+/* Working Experiences */
+.working-experiences {
+    width: 94%;
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 40px 28px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    text-align: left;
+}
+
+.working-experiences h2 {
+    text-align: center;
+    color: #3f6038;
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.working-experiences p {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+}
+
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.experience-item {
+    background: #f8f3e9;
+    border: 1px solid #e2d6c3;
+    border-radius: 12px;
+    padding: 18px 16px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience-item h3 {
+    color: #224120;
+    margin: 0;
+    font-size: 1.25rem;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, #e4f0e2, #d3e6cb);
+    border-radius: 12px;
+    border: 1px solid #b6d0a8;
+    box-shadow: 0 6px 14px rgba(34, 65, 32, 0.12);
+}
+
+.experience-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    font-weight: 600;
+    color: #1f3b1a;
+}
+
+.experience-company {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d9f2d4, #c4e6be);
+    border: 1px solid #9bc48e;
+    color: #1f3b1a;
+    box-shadow: 0 5px 12px rgba(31, 59, 26, 0.12);
+}
+
+.experience-dates {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e3f5dc, #d2ebc9);
+    border: 1px solid #a7c89b;
+    color: #2c4d24;
+    box-shadow: 0 5px 12px rgba(44, 77, 36, 0.1);
+}
+
+.experience-item ul {
+    padding-left: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -231,7 +325,7 @@ body {
 /* Portfolio */
 .portfolio {
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +335,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
     padding: 20px;
 }
 
@@ -286,6 +380,68 @@ body {
     margin: 10px 0;
 }
 
+/* OJT Skills Section */
+.skills-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 20px auto;
+    padding: 40px 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    color: #3f6038;
+    margin-bottom: 8px;
+}
+
+.skills-section p {
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skills-card {
+    background: #f8f3e9;
+    border: 1px solid #e2d6c3;
+    border-radius: 12px;
+    padding: 20px 18px;
+    text-align: left;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.skills-card h3 {
+    color: #3f6038;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.skills-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-card li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #d6c8b2;
+    color: #444;
+    font-size: 1rem;
+}
+
+.skills-card li:last-child {
+    border-bottom: none;
+}
+
 .button {
     display: inline-block;
     background-color: #3f6038;
@@ -327,8 +483,8 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Optional: More prominent shadow */
 
     /* Max dimensions relative to the viewport, allowing for padding */
-    max-width: 90vw; /* Maximum width is 90% of viewport width */
-    max-height: 90vh; /* Maximum height is 90% of viewport height */
+    width: 85vw; /* Width is 85% of viewport width */
+    height: 85vh; /* Height is 85% of viewport height */
 
     /* Remove overflow */
     overflow: hidden; /* This prevents scrollbars on the modal content itself */
@@ -360,19 +516,26 @@ body {
 }
 
 /* Styles for the content within the modal */
+#modal-content-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #modal-content-area img {
     max-width: 100%; /* Image scales down to fit modal width */
-    max-height: calc(100% - 40px); /* Adjust height to fit, considering padding of modal-content */
+    max-height: 100%; /* Adjust height to fit modal height */
     display: block; /* Remove extra space below image */
     object-fit: contain; /* Ensures the entire image is visible within its bounds */
 }
 
 #modal-content-area iframe {
-    width: 100%; /* Video scales down to fit modal width */
-    height: 100%; /* Video scales down to fit modal height */
-    max-width: 100%;
-    max-height: 100%;
+    width: 100% !important; /* Video scales down to fit modal width */
+    height: 100% !important; /* Video scales down to fit modal height */
     display: block; /* Remove extra space below iframe */
+    aspect-ratio: 16/9; /* Maintain video aspect ratio */
 }
 
 /* Style for the button */
