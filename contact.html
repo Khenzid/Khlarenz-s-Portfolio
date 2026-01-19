@@ -14,12 +14,22 @@
 <body>
     <!-- Navigation -->
     <div class="nav">
-        <a href="index.html"><img src="logo.png"></a>
-        <a href="index.html"><button>HOME</button></a>
-        <a href="aboutme.html"><button>ABOUT</button></a>
-        <a href="ojt.html"><button>OJT</button></a>
-        <a href="myWork.html"><button>WORKS</button></a>
-        <a href="index.html#contact"><button>CONTACTS</button></a>
+        <a href="index.html"><img src="assets/logo.png"></a>
+        <div class="nav-desktop">
+            <a href="index.html"><button>HOME</button></a>
+            <a href="aboutme.html"><button>ABOUT</button></a>
+            <a href="ojt.html"><button>OJT</button></a>
+            <a href="myWork.html"><button>WORKS</button></a>
+            <a href="index.html#contact"><button>CONTACTS</button></a>
+        </div>
+        <div class="hamburger-menu" id="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-mobile" id="nav-mobile">
+            <a href="index.html" onclick="toggleMenu()"><button>HOME</button></a>
+            <a href="aboutme.html" onclick="toggleMenu()"><button>ABOUT</button></a>
+            <a href="ojt.html" onclick="toggleMenu()"><button>OJT</button></a>
+            <a href="myWork.html" onclick="toggleMenu()"><button>WORKS</button></a>
+            <a href="index.html#contact" onclick="toggleMenu()"><button>CONTACTS</button></a>
+        </div>
     </div>
 
     <div class="section" id="contact">
@@ -40,5 +50,6 @@
                         </div>
     </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

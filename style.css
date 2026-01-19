@@ -84,6 +84,13 @@ body {
     transform: translateY(-55%);
 }
 
+/* Navigation Desktop */
+.nav-desktop {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
 /* Profile Section */
 .profile {
     display: flex;
@@ -219,7 +226,7 @@ body {
 
 .youtube-video iframe {
     display: block; /* Removes any extra space below the iframe */
-    width: 1200px; /* Ensure the iframe maintains its specified width */
+    width: 1250px; /* Ensure the iframe maintains its specified width */
     height: 600px; /* Ensure the iframe maintains its specified height */
 }
 
@@ -315,10 +322,32 @@ body {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
+    .youtube-video {
+        max-width: 90vw;
+        margin: 20px auto 40px auto;
+        padding: 10px;
+    }
+
     .youtube-video iframe {
-        width: 100%; /* Make the video fluid on smaller screens */
-        height: auto; /* Adjust height proportionally */
-        max-width: 560px; /* Prevent it from getting too wide if 100% is too much */
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .youtube-video {
+        max-width: 90vw;
+        margin: 0px auto 40px auto;
+        padding: 20px;
+    }
+
+    .youtube-video iframe {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-height: 300px;
     }
 }
 
@@ -722,7 +751,7 @@ body {
     .section {
         height: auto;
         min-height: 80vh; /* Re-apply min-height for mobile if desired, or let base control */
-        padding-top: 80px; /* This padding is still needed for the fixed nav (adjust based on nav height) */
+        padding-top: 0; /* Remove extra padding at top */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -762,13 +791,27 @@ body {
     .about {
         flex-direction: column;
         align-items: center;
-        padding: 30px 15px;
+        justify-content: center;
+        padding: 20px 15px;
         max-width: 100%;
+        margin-top: 0;
     }
 
     .about-image {
         max-width: 300px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 100%;
+        transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
     }
 
     .about-text {
@@ -791,7 +834,7 @@ body {
     .youtube-video iframe {
         width: 100%; /* Make the video fluid on smaller screens */
         height: auto; /* Adjust height proportionally */
-        max-width: 560px; /* Prevent it from getting too wide if 100% is too much */
+        max-width: 100%; /* Make it larger on mobile */
     }
 
     .portfolio-grid {
@@ -894,4 +937,128 @@ body {
     src: url("Poppins-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px 15px;
+    z-index: 1001;
+}
+
+.hamburger-menu:hover {
+    opacity: 0.8;
+}
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(63, 96, 56, 0.95);
+    flex-direction: column;
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nav-mobile.active {
+    display: flex;
+}
+
+.nav-mobile a {
+    width: 100%;
+    display: block;
+}
+
+.nav-mobile button {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.nav-mobile button:hover {
+    background-color: rgba(63, 96, 56, 0.7);
+}
+
+/* Mobile Responsive - Navigation Only */
+@media (max-width: 1024px) {
+    .nav {
+        gap: 50px;
+        padding: 12px 0;
+    }
+
+    .nav button {
+        font-size: 1.2em;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        justify-content: space-between;
+        gap: 0;
+        padding: 10px 15px;
+    }
+
+    .nav img {
+        width: 2.5em;
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 0;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-mobile {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .nav-mobile button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 8px 12px;
+    }
+
+    .nav img {
+        width: 2em;
+    }
+
+    .hamburger-menu {
+        font-size: 1.5em;
+        padding: 8px 12px;
+    }
+
+    .nav-mobile button {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
 }

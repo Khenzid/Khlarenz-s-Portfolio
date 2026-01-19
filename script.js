@@ -1,3 +1,11 @@
+// Mobile Menu Toggle
+function toggleMenu() {
+    var navMobile = document.getElementById("nav-mobile");
+    if (navMobile) {
+        navMobile.classList.toggle("active");
+    }
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
