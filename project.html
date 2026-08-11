@@ -12,28 +12,40 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- NAVIGATION -->
     <div class="nav">
-        <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
+        <a href="index.html"><img src="assets/logo.png"></a>
         <div class="nav-desktop">
             <a href="index.html"><button>HOME</button></a>
             <a href="aboutme.html"><button>ABOUT</button></a>
-            <a href="ojt.html"><button>OJT</button></a>
-            <a href="myWork.html"><button>WORKS</button></a>
-            <a href="index.html#contact"><button>CONTACTS</button></a>
+            <a href="experience.html"><button>EXPERIENCE</button></a>
+            <!-- <a href="ojt.html"><button>OJT</button></a> -->
+            <a href="project.html"><button>PROJECTS</button></a>
+            <a href="contact.html"><button>CONTACTS</button></a>
         </div>
         <div class="hamburger-menu" id="hamburger" onclick="toggleMenu()">☰</div>
         <div class="nav-mobile" id="nav-mobile">
             <a href="index.html" onclick="toggleMenu()"><button>HOME</button></a>
             <a href="aboutme.html" onclick="toggleMenu()"><button>ABOUT</button></a>
+            <a href="experience.html" onclick="toggleMenu()"><button>EXPERIENCE</button></a>
             <a href="ojt.html" onclick="toggleMenu()"><button>OJT</button></a>
-            <a href="myWork.html" onclick="toggleMenu()"><button>WORKS</button></a>
-            <a href="index.html#contact" onclick="toggleMenu()"><button>CONTACTS</button></a>
+            <a href="project.html" onclick="toggleMenu()"><button>PROJECTS</button></a>
+            <a href="contact.html" onclick="toggleMenu()"><button>CONTACTS</button></a>
         </div>
     </div>
 
     <div class="section" id="portfolio">
         <div class="portfolio">
             <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <img src="assets/automation testing.jpg" alt="Automation Testing Project">
+                    <div class="portfolio-info">
+                        <h2>Automation Testing (OJT)</h2>
+                        <p>Automation testing using Playwright</p>
+                        <button class="button view-more-btn" data-image="assets/automation testing.jpg">View Photo</button>
+                    </div>
+                </div>
+
                 <div class="portfolio-card">
                     <img src="assets/Donut.jpg" alt="Donut Project">
                     <div class="portfolio-info">
@@ -75,7 +87,7 @@
                     <div class="portfolio-info">
                         <h2>Evolution of LeoSnow</h2>
                         <p>Final Project in Multimedia</p>
-                        <button class="button watch-btn" data-youtube-url="https://www.youtube.com/embed/Deqrtc7SM5w?si=ehijI10ycNYnGNFd">Watch button</button>
+                        <button class="button watch-btn" data-youtube-url="https://www.youtube.com/embed/Deqrtc7SM5w?si=ehijI10ycNYnGNFd">Watch</button>
                     </div>
                 </div>
 
@@ -95,7 +107,7 @@
                     <div class="portfolio-info">
                         <h2>Investigator</h2>
                         <p>Onebutton Game</p>
-                         <button class="button watch-btn" data-youtube-url="https://www.youtube.com/embed/hNHuWFRnBJs?si=EjypK8DdZ6KRC8Xc">Watch button</button>
+                         <button class="button watch-btn" data-youtube-url="https://www.youtube.com/embed/hNHuWFRnBJs?si=EjypK8DdZ6KRC8Xc">Watch</button>
                     </div>
                 </div>
 
@@ -115,7 +127,7 @@
                     <div class="portfolio-info">
                         <h2>Captain Conquest</h2>
                         <p>Expansion App for our Table-Top Game</p>
-                         <button class="button watch-btn" data-youtube-url="https://www.youtube.com/watch?v=qXbPZ2--sJM">Watch button</button>
+                         <button class="button watch-btn" data-youtube-url="https://www.youtube.com/watch?v=qXbPZ2--sJM">Watch</button>
                     </div>
                 </div>
             </div>
