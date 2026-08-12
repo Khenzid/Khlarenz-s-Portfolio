@@ -966,7 +966,14 @@ body {
     }
 
     .nav img {
-        display: none; /* Hide logo image on mobile */
+        display: block; /* Show the logo on mobile */
+        width: 3.8em;
+        height: auto;
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        border-radius: 50%;
     }
 
     /* Show hamburger menu on mobile */
