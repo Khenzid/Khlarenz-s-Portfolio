@@ -6,6 +6,39 @@ function toggleMenu() {
     }
 }
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function setupBackToTopButton() {
+    var pageHasScroll = document.documentElement.scrollHeight > window.innerHeight + 40;
+
+    if (!pageHasScroll) {
+        return;
+    }
+
+    var backToTopButton = document.createElement("button");
+    backToTopButton.type = "button";
+    backToTopButton.className = "back-to-top";
+    backToTopButton.setAttribute("aria-label", "Back to top");
+    backToTopButton.title = "Back to top";
+    backToTopButton.textContent = "↑";
+    backToTopButton.addEventListener("click", scrollToTop);
+
+    document.body.appendChild(backToTopButton);
+
+    var toggleVisibility = function() {
+        var shouldShow = window.scrollY > 250;
+        backToTopButton.classList.toggle("visible", shouldShow);
+    };
+
+    toggleVisibility();
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -63,4 +96,10 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupBackToTopButton);
+} else {
+    setupBackToTopButton();
 }
